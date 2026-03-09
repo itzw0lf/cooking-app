@@ -84,7 +84,7 @@ button.addEventListener("click", () => {
         {
           method: "POST",
           headers: {
-            Authorization: "Bearer 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",
+            Authorization: "Bearer key",
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
