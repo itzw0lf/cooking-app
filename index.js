@@ -19,7 +19,7 @@ function loadHistory() {
   recipes.forEach((entry, index) => {
     const item = document.createElement("div");
     item.classList.add("history-item");
-    // Support both old format (string) and new format (object with name)
+    
     const name = typeof entry === "object" ? entry.name : "🍽️ Recipe " + (index + 1);
     const content = typeof entry === "object" ? entry.content : entry;
     item.textContent = name;
@@ -113,7 +113,7 @@ button.addEventListener("click", () => {
       const result = await response.json();
       const fullContent = result.choices[0].message.content;
 
-      // Extract the recipe name from the last line
+     
       const lines = fullContent.trim().split("\n");
       const lastLine = lines[lines.length - 1];
       let recipeName = "🍽️ New Recipe";
